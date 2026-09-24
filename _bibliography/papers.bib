@@ -1,115 +1,43 @@
----
----
-
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title     = {Relativity: the Special and General Theory},
-  author    = {Einstein, Albert},
-  year      = {1920},
-  publisher = {Methuen & Co Ltd},
-  html      = {relativity.html}
-}
-
-@book{einstein1956investigations,
+@inproceedings{olin2025thinkfastrealtimekinodynamic,
+  title     = {Think Fast: Real-Time Kinodynamic Belief-Space Planning for Projectile Interception},
+  author    = {Olin, Gabriel and Chen, Lu and Gandotra, Nayesha and Likhachev, Maxim and Choset, Howie},
+  booktitle = {2026 IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2026},
+  abstract  = {Intercepting fast moving objects, by its very nature, is challenging because of its tight time constraints. This problem becomes further complicated in the presence of sensor noise because noisy sensors provide, at best, incomplete information, which results in a distribution over target states to be intercepted. Since time is of the essence, to hit the target, the planner must begin directing the interceptor, in this case a robot arm, while still receiving information. We introduce an tree-like structure, which is grown using kinodynamic motion primitives in state-time space. This tree-like structure encodes reachability to multiple goals from a single origin, while enabling real-time value updates as the target belief evolves and seamless transitions between goals. We evaluate our framework on an interception task on a 6 DOF industrial arm (ABB IRB-1600) with an onboard stereo camera (ZED 2i). A robust Innovation-based Adaptive Estimation Adaptive Kalman Filter (RIAE-AKF) is used to track the target and perform belief updates.},
+  arxiv     = {2512.01108},
+  eprint    = {2512.01108},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
+  url       = {https://arxiv.org/abs/2512.01108},
+  pdf       = {icra-2026-poster.pdf},
+  preview   = {reactiveplanning.gif},
   bibtex_show = {true},
-  title       = {Investigations on the Theory of the Brownian Movement},
-  author      = {Einstein, Albert},
-  year        = {1956},
-  publisher   = {Courier Corporation},
-  preview     = {brownian-motion.gif}
+  selected  = {true}
 }
 
-@article{einstein1950meaning,
-  abbr        = {AJP},
+@article{olin2026adaptivecbf,
+  title       = {Learning Adaptive Control Barrier Functions for Safe, Real Time Motion Planning},
+  author      = {Olin, Gabriel},
+  year        = {2026},
+  note        = {Preprint},
+  abstract    = {Control Barrier Functions (CBFs) are powerful safety-filtering tools for nonlinear robotic systems, often formulated as quadratic programs. However, the behavior of CBF-based controllers depends heavily on manually selected parameters, such as class-\(\mathcal{K}\) gains and quadratic objective weights, which can be difficult to tune and lack the expressivity to navigate cluttered, dynamic environments. This paper introduces a differentiable optimization-based imitation learning framework that trains state-dependent Control Barrier Function Quadratic Program (CBF-QP) parameters from a privileged, kinodynamic expert planner. By using the CBF-QP as a structured policy class that embeds known model information and safety constraints directly into the learning problem, we show that pairing a computationally cheap global planner with a learned CBF can better approximate expert behavior while remaining suitable for receding-horizon control. We evaluate our approach in planar navigation environments with a nonlinear vehicle model and time-varying obstacles, showing that learned state-dependent CBF-QPs improve closed-loop performance over fixed-parameter baselines and enable a computationally efficient planning-and-control stack.},
+  pdf         = {https://drive.google.com/file/d/1LW2ymQh7TqC2eHKbLzavnqL6PxU6WJdP/view?usp=drive_link},
+  preview     = {bimanual.gif},
+  selected    = {true}
+}
+
+@inproceedings{veerapaneni2025cbs_protocol,
+  title     = {Conflict-Based Search as a Protocol: A Multi-Agent Motion Planning Protocol for Heterogeneous Agents, Solvers, and Independent Tasks},
+  author    = {Veerapaneni, Rishi and Tang, Alvin and He, Haodong and Zhao, Sophia and Shah, Viraj and Cen, Yidai and Ji, Ziteng and Olin, Gabriel and Arrizabalaga, Jon and Shaoul, Yorai and Li, Jiaoyang and Likhachev, Maxim},
+  booktitle = {2026 IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2026},
+  abstract  = {Imagine the future construction site, hospital, office, or even sophisticated household with dozens of robots bought from different manufacturers. How can we enable these different systems to effectively move in a shared environment, given that each robot may have its own independent motion planning system? This work shows how we can get efficient collision-free movements between algorithmically heterogeneous agents by using Conflict-Based Search (Sharon et al. 2015) as a protocol. At its core, the CBS Protocol requires one specific single-agent motion planning API; finding a collision-free path that satisfies any space-time constraints. Given such an API, CBS uses a central planner to find collision-free paths - independent of how the API is implemented. We show how this protocol enables multi-agent motion planning for a heterogeneous team of agents completing independent tasks with a variety of single-agent planners including: Heuristic Search (e.g., A*), Sampling Based Search (e.g., RRT), Optimization (e.g., Direct Collocation), Diffusion, and Reinforcement Learning.},
+  arxiv     = {2510.00425},
+  website   = {https://rishi-v.github.io/CBS-Protocol/},
   bibtex_show = {true},
-  title       = {The meaning of relativity},
-  author      = {Einstein, Albert and Taub, AH},
-  journal     = {American Journal of Physics},
-  volume      = {18},
-  number      = {6},
-  pages       = {403--404},
-  year        = {1950},
-  publisher   = {American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
-  abbr              = {PhysRev},
-  title             = {Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author            = {Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract          = {In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal           = {Phys. Rev.},
-  location          = {New Jersey},
-  volume            = {47},
-  issue             = {10},
-  pages             = {777--780},
-  numpages          = {0},
-  year              = {1935},
-  month             = {May},
-  publisher         = aps,
-  doi               = {10.1103/PhysRev.47.777},
-  url               = {https://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html              = {https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf               = {example_pdf.pdf},
-  altmetric         = {248277},
-  dimensions        = {true},
-  google_scholar_id = {qyhmnyLat1gC},
-  video             = {https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info   = {. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation        = {* Example use of superscripts<br>† Albert Einstein},
-  selected          = {true},
-  inspirehep_id     = {3255}
-}
-
-@article{einstein1905molekularkinetischen,
-  title     = {{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author    = {Einstein, A.},
-  journal   = {Annalen der physik},
-  volume    = {322},
-  number    = {8},
-  pages     = {549--560},
-  year      = {1905},
-  publisher = {Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr    = {Ann. Phys.},
-  title   = {Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author  = {Einstein, A.},
-  journal = {Ann. Phys.},
-  volume  = {17},
-  pages   = {549--560},
-  year    = {1905}
-}
-
-@article{einstein1905electrodynamics,
-  title  = {On the electrodynamics of moving bodies},
-  author = {Einstein, A.},
-  year   = {1905}
-}
-
-@article{einstein1905photoelectriceffect,
-  bibtex_show = {true},
-  abbr        = {Ann. Phys.},
-  title       = {{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}},
-  author      = {Albert Einstein},
-  abstract    = {This is the abstract text.},
-  journal     = {Ann. Phys.},
-  volume      = {322},
-  number      = {6},
-  pages       = {132--148},
-  year        = {1905},
-  doi         = {10.1002/andp.19053220607},
-  award       = {Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name  = {Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show = {true},
-  title       = {Letters on wave mechanics},
-  author      = {Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year        = {1967},
-  publisher   = {Vision},
-  preview     = {wave-mechanics.gif},
-  abbr        = {Vision}
+  archivePrefix = {arXiv},
+  eprint    = {2510.00425},
+  primaryClass = {cs.MA},
+  preview   = {2025_cbs_protocol.gif},
+  selected  = {true}
 }
