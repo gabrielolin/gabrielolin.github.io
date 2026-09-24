@@ -9,6 +9,8 @@ category: research
 
 This project studies planar, non-prehensile manipulation: pushing and reorienting a T-shaped object with a robot arm. A pretrained diffusion policy generates action sequences from observation and sampled latent noise. Instead of retraining that policy, a learned steering policy selects the initial noise to improve task performance.
 
+To train the base diffusion policy, we collected Push-T demonstrations with joystick teleoperation in simulation, with randomized start/goal poses. The initial behavior cloning dataset had enough coverage to generalize well within the distribution of similar goal states, but struggled to generalize to larger rotations, which were underrepresented.
+
 In the original policy, initial noise is sampled from a fixed Gaussian. A learned latent-noise actor `πᵂφ` instead chooses that noise, which the frozen diffusion policy maps to an action sequence: `w ~ πᵂφ(· | s)`, `a = πdp(s, w)`. Only the steering actor and critics are learned; the diffusion policy remains fixed. This follows the latent-action actor–critic formulation in [Wagenmaker et al. (CoRL 2025)](https://proceedings.mlr.press/v305/wagenmaker25a.html).
 
 The method uses an action-space critic `Qᴬ` and a latent-noise critic `Qᵂ`. The action critic learns from environment transitions `(s, a, r, s′)`:
@@ -33,10 +35,8 @@ $$
 \left[Q^{\mathcal{W}}(s,w)\right].
 $$
 
-The Push-T demonstrations were collected by joystick teleoperation, with fixed-pose and randomized start/goal datasets. The presentation also describes validating the diffusion policy on a long-horizon point-maze task. The reported limitation is weaker recovery from out-of-distribution states and start/goal configurations.
-
 ![Latent noise candidates are mapped by the diffusion policy to robot actions.](/assets/img/dsrl.png)
 
 ![A robot arm pushing a T-shaped object in the Push-T simulation.](/assets/gif/pusht.gif)
 
-<a href="/assets/pdf/Improving%20Diffusion%20Policies%20with%20Latent%20Noise%20Steering%20for%20Planar%20Manipulation%20.pdf">Project presentation (PDF)</a> · Gabriel Olin and Benji Li
+Gabriel Olin and Benji Li

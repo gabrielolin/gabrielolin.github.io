@@ -1,16 +1,14 @@
 ---
 layout: about
-title: home
+title: Home
 permalink: /
-subtitle: Robotics · Motion Planning · Learning
 
 profile:
   align: right
   image: headshot.jpg
   image_circular: false
   more_info: >
-    <p>Search-Based Planning Lab</p>
-    <p>Carnegie Mellon University</p>
+    <p>MS Robotics, Carnegie Mellon University</p>
 
 selected_papers: true
 social: true
@@ -57,10 +55,24 @@ latest_posts:
   }
 </style>
 
-I work on robotics problems where decisions have to be both fast and informed by the structure of the task. My research combines search-based planning, dynamics, state estimation, and learning to help robots act in real time under uncertainty.
+I am a recent M.S. Robotics graduate from [The Robotics Institute](https://www.ri.cmu.edu/), Carnegie Mellon University, where I was advised by [Maxim Likhachev](https://www.cs.cmu.edu/~maxim/) and [Howie Choset](https://www.ri.cmu.edu/ri-faculty/howie-choset/).
 
-My thesis work explored two directions: belief-space planning for intercepting fast-moving objects, and learning adaptive control barrier functions that distill kinodynamic planners into reactive safety filters. The common thread is preserving useful model-based reasoning while meeting the demands of real-time execution.
+My research focused on reactive motion planning and control, allowing robots to quickly move through uncertain and dynamic environments. I am interested in combining ideas from machine learning, discrete search, and optimal control to deploy performant, yet safe algorithms with limited compute.
 
-I earned a B.S. in Mechanical Engineering with a Computer Science concentration from UCLA and an M.S. in Robotics from Carnegie Mellon University, where I worked with the Search-Based Planning Lab.
+Previously, I earned a B.S. in Mechanical Engineering with a Computer Science concentration from UCLA.
 
-[Thesis presentation (PDF)](/assets/pdf/thesis-presentation.pdf) · [ICRA 2026 poster (PDF)](/assets/pdf/icra-2026-poster.pdf)
+## News
+
+- **July 2026** — Successfully defended my Master's thesis, [*Exploiting Structure for Real-Time Robot Motion Planning and Control*](https://publications.ri.cmu.edu/exploiting-structure-for-real-time-robot-motion-planning-and-control).
+- **January 2026** — Two papers accepted to ICRA 2026: [*Think Fast*](https://arxiv.org/abs/2512.01108) and [*CBS Protocol*](https://arxiv.org/abs/2510.00425).
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const selectedPublications = document.querySelector('h2 a[href$="/publications/"]');
+    if (selectedPublications) selectedPublications.textContent = "Selected Publications";
+    document.querySelectorAll('.publications a[href="http://localhost:8080/cbf-safety-filters/"]').forEach((link) => {
+      link.textContent = "Webpage";
+      link.setAttribute("aria-label", "Webpage");
+    });
+  });
+</script>

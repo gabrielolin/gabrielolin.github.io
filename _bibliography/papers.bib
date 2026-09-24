@@ -16,12 +16,13 @@
 }
 
 @article{olin2026adaptivecbf,
-  title       = {Learning Adaptive Control Barrier Functions for Safe, Real Time Motion Planning},
-  author      = {Olin, Gabriel},
+  title       = {Learning Adaptive Control Barrier Functions for Safe, Real-Time Motion Planning},
+  author      = {Olin, Gabriel and Likhachev, Maxim and Choset, Howie},
   year        = {2026},
   note        = {Preprint},
   abstract    = {Control Barrier Functions (CBFs) are powerful safety-filtering tools for nonlinear robotic systems, often formulated as quadratic programs. However, the behavior of CBF-based controllers depends heavily on manually selected parameters, such as class-\(\mathcal{K}\) gains and quadratic objective weights, which can be difficult to tune and lack the expressivity to navigate cluttered, dynamic environments. This paper introduces a differentiable optimization-based imitation learning framework that trains state-dependent Control Barrier Function Quadratic Program (CBF-QP) parameters from a privileged, kinodynamic expert planner. By using the CBF-QP as a structured policy class that embeds known model information and safety constraints directly into the learning problem, we show that pairing a computationally cheap global planner with a learned CBF can better approximate expert behavior while remaining suitable for receding-horizon control. We evaluate our approach in planar navigation environments with a nonlinear vehicle model and time-varying obstacles, showing that learned state-dependent CBF-QPs improve closed-loop performance over fixed-parameter baselines and enable a computationally efficient planning-and-control stack.},
   pdf         = {https://drive.google.com/file/d/1LW2ymQh7TqC2eHKbLzavnqL6PxU6WJdP/view?usp=drive_link},
+  html        = {http://localhost:8080/cbf-safety-filters/},
   preview     = {bimanual.gif},
   selected    = {true}
 }

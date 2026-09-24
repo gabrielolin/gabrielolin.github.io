@@ -6,11 +6,11 @@ title: Gabriel Olin
 first_name: Gabriel
 middle_name:
 last_name: Olin
-contact_note: Robotics, motion planning, and learning
+contact_note:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Robotics researcher working on real-time motion planning and safe, reactive control.
 footer_text: >
-  Robotics · Motion Planning · Machine Learning · Control
+  Powered by Jekyll with al-folio theme. Hosted by GitHub Pages.
 keywords: Gabriel Olin, robotics, motion planning, machine learning, control
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🤖 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -68,8 +68,6 @@ al_folio:
     source: al-org-dev/distill-template#al-folio
     allow_remote_loader: false
   features:
-    cv:
-      enabled: true
     distill:
       enabled: true
   compat:
@@ -271,7 +269,6 @@ plugins:
   # al-folio plugins
   - al_folio_core
   - al_icons
-  - al_folio_cv
   - al_folio_distill
   - al_folio_upgrade
   - al_folio_bootstrap_compat

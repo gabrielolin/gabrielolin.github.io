@@ -1,8 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
-description: Publications in robot motion planning and control.
+title: Publications
 nav: true
 nav_order: 2
 ---
@@ -53,3 +52,12 @@ nav_order: 2
 {% bibliography %}
 
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.publications a[href="http://localhost:8080/cbf-safety-filters/"]').forEach((link) => {
+      link.textContent = "Webpage";
+      link.setAttribute("aria-label", "Webpage");
+    });
+  });
+</script>
