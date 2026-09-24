@@ -55,7 +55,7 @@ nav_order: 2
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('.publications a[href="http://localhost:8080/cbf-safety-filters/"]').forEach((link) => {
+    document.querySelectorAll('.publications a[href="/cbf-safety-filters/"]').forEach((link) => {
       link.textContent = "Webpage";
       link.setAttribute("aria-label", "Webpage");
     });

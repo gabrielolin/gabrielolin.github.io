@@ -70,7 +70,7 @@ Previously, I earned a B.S. in Mechanical Engineering with a Computer Science co
   document.addEventListener("DOMContentLoaded", () => {
     const selectedPublications = document.querySelector('h2 a[href$="/publications/"]');
     if (selectedPublications) selectedPublications.textContent = "Selected Publications";
-    document.querySelectorAll('.publications a[href="http://localhost:8080/cbf-safety-filters/"]').forEach((link) => {
+    document.querySelectorAll('.publications a[href="/cbf-safety-filters/"]').forEach((link) => {
       link.textContent = "Webpage";
       link.setAttribute("aria-label", "Webpage");
     });
